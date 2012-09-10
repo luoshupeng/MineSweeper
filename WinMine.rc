@@ -1,0 +1,300 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Sys. Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Sys. Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      MOVEABLE PURE   "WinMine.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDC_APPICON             ICON    DISCARDABLE     "100.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MINE_COLOR          BITMAP  DISCARDABLE     "410.bmp"
+IDB_MINE_BLACK          BITMAP  DISCARDABLE     "411.bmp"
+IDB_NUM_COLOR           BITMAP  DISCARDABLE     "420.bmp"
+IDB_NUM_BLACK           BITMAP  DISCARDABLE     "421.bmp"
+IDB_SMILE_COLOR         BITMAP  DISCARDABLE     "430.bmp"
+IDB_SMILE_BLACK         BITMAP  DISCARDABLE     "431.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDW_WAVE_TIME           WAVE    DISCARDABLE     "432.wav"
+IDW_WAVE_DONE           WAVE    DISCARDABLE     "433.wav"
+IDW_WAVE_BOMB           WAVE    DISCARDABLE     "434.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "游戏(&G)"
+    BEGIN
+        MENUITEM "开局(&N)\tF2",                IDM_BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "初级(&B)",                    IDM_BEGINNER
+        MENUITEM "中级(&I)",                    IDM_INTERMEDIATE, CHECKED
+        MENUITEM "高级(&E)",                    IDM_ADVANCED
+        MENUITEM "自定义(&C)...",               IDM_CUSTOMDEFINE
+        MENUITEM SEPARATOR
+        MENUITEM "标记(?)(&M)",                 IDM_MARK, CHECKED
+        MENUITEM "颜色(&L)",                    IDM_COLOR, CHECKED
+        MENUITEM "声音(&S)",                    IDM_SOUND, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "扫雷英雄榜(&T)...",           IDM_HEROLIST
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    IDM_EXIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "目录(&C)\tF1",                IDM_CONTENTS
+        MENUITEM "查找帮助主题(&S)...",         IDM_SEARCHHELP
+        MENUITEM "使用帮助(&H)",                IDM_USEHELP, HELP
+        MENUITEM SEPARATOR
+        MENUITEM "关于扫雷(&A)...",             IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CUSTOMDLG DIALOGEX 0, 0, 129, 85
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "自定义雷区"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDC_CUSTOM_OK,80,20,40,16
+    PUSHBUTTON      "取消",IDC_CUSTOM_CANCEL,80,46,40,16
+    LTEXT           "高度(&H):",112,10,22,35,10
+    EDITTEXT        IDC_CUSTOM_WIDTH,46,20,25,12,ES_NUMBER
+    LTEXT           "宽度(&W):",113,10,37,35,10
+    EDITTEXT        IDC_CUSTOM_HEIGHT,46,35,25,12,ES_NUMBER
+    LTEXT           "雷数(&M):",111,10,52,35,10
+    EDITTEXT        IDC_CUSTOM_BOMB,46,50,25,12,ES_NUMBER
+END
+
+IDD_RECORDDLG DIALOGEX 0, 28, 107, 106
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "恭喜,新纪录!"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_RECORD_NAME,12,51,78,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDC_RECORD_OK,32,72,36,14
+    CTEXT           "",IDC_RECORD_MSG,7,13,88,33
+END
+
+IDD_HEROLISTDLG DIALOGEX 0, 28, 170, 75
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "扫雷英雄榜"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDC_HEROLIST_OK,115,55,30,12
+    PUSHBUTTON      "重新计分(&R)",IDC_HEROLIST_RENEW,25,55,50,12
+    LTEXT           "初级:",708,10,15,29,8
+    RTEXT           "",IDC_BEGINER_TIME,38,15,40,8
+    LTEXT           "",IDC_BEGINER_NAME,92,15,76,8
+    LTEXT           "中级:",709,10,25,29,8
+    RTEXT           "",IDC_INTER_TIME,38,25,40,8
+    LTEXT           "",IDC_INTER_NAME,92,25,76,8
+    LTEXT           "高级:",710,10,35,29,8
+    RTEXT           "",IDC_ADVANCED_TIME,38,35,40,8
+    LTEXT           "",IDC_ADVANCED_NAME,92,35,76,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_RECORDDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 104
+        BOTTOMMARGIN, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          IDM_CONTENTS,           VIRTKEY, NOINVERT
+    VK_F2,          IDM_BEGIN,              VIRTKEY, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "GUCAS\0"
+            VALUE "FileDescription", "WinMine\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "WinMine\0"
+            VALUE "LegalCopyright", "Copyright ? 2006\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "WinMine.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "GUCAS- WinMine WIN32 API\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APPMANE             "WinMine"
+    IDS_ERROR               "扫雷错误"
+    IDS_TIMER_ERROR         "无法配置计时器。请关闭一些应用程序后再试一次。"
+    IDS_MEMORY_ERROR        "内存不足"
+    IDS_ERRORID             "错误: %d"
+    IDS_SECOND              "%d 秒"
+    IDS_NORMAL_NAME         "匿名"
+    IDS_RECORD_BEGINER      "已破初级记录。\r请留尊姓大名。"
+    IDS_RECORD_INTER        "已破中级记录。\r请留尊姓大名。"
+    IDS_RECORD_ADVGANCED    "已破高级记录。\r请留尊姓大名。"
+    IDS_APPCAPTION          "扫雷"
+    IDS_AUTHER              "by Wang Baochen and Zhang Wenxing in 2006-03."
+    IDS_HELPFILEPATH_WIN    "C:\\WINDOWS\\Help\\WinMine.chm"
+    IDS_HELPFILEPATH_HELP   "C:\\WINDOWS\\Help\\NThelp.chm"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
